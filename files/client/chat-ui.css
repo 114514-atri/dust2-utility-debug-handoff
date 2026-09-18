@@ -1,0 +1,69 @@
+#game-chat {
+  position: fixed;
+  left: 18px;
+  bottom: 118px;
+  z-index: 35;
+  width: min(520px, 70vw);
+  pointer-events: none;
+  font: 15px/1.35 "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.chat-history {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 220px;
+  overflow: hidden;
+  padding-right: 4px;
+}
+.chat-history:has(.chat-help) {
+  max-height: min(58vh, 520px);
+  overflow-y: auto;
+  pointer-events: auto;
+}
+.chat-line {
+  color: #f2f5f7;
+  text-shadow: 0 1px 2px #000, 0 0 4px #000a;
+  opacity: 1;
+  transition: opacity 1.2s ease;
+  word-break: break-word;
+}
+.chat-line .chat-help {
+  white-space: pre-line;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #b8d4e8;
+}
+.chat-line.faded { opacity: 0.22; }
+.chat-line.team-CT { color: #8eb7ff; }
+.chat-line.team-T { color: #efd28a; }
+.chat-line.scope-team { font-style: italic; }
+.chat-line.dead { opacity: 0.85; }
+.chat-line.system { color: #9ad0ff; font-style: normal; }
+.chat-line .region-temp { color: #5dffa0; font-weight: 700; }
+.chat-line .region-local { color: #ff6b6b; font-weight: 600; }
+.chat-compose {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: #0b1218e6;
+  border: 1px solid #3d5160;
+}
+.chat-compose[hidden] { display: none !important; }
+.chat-scope {
+  flex: 0 0 auto;
+  min-width: 36px;
+  color: #9ad0ff;
+  font-weight: 700;
+}
+.chat-scope[data-scope="team"] { color: #8fd39a; }
+.chat-input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #f4f7f9;
+  font: inherit;
+}

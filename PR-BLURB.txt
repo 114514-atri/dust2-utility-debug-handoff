@@ -1,0 +1,11 @@
+Hi — utility + debug modes handoff (no bot wiring).
+
+Included:
+- Modes `utility` / `debug` + chat commands (`/record`, `/show`, `/region`, `/fly`, …)
+- Drop-in code in `files/`, merge guide in `wiring/`, protocol notes in `docs/PROTOCOL-ADDITIONS.md`
+- Player command sheet: `docs/模式和指令.txt`
+
+Out of scope on purpose:
+- Bot use of practice JSON / callout regions (formats are ready for a follow-up)
+
+Please merge hooks into upstream `game.js` / `main.js` rather than replacing those files wholesale.
