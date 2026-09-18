@@ -1,3 +1,5 @@
+**GitHub：** https://github.com/114514-atri/dust2-utility-debug-handoff
+
 # 移交包：道具模式 + 调试模式 + 指令
 
 **范围**：仅贡献「道具练习 (`utility`)」与「调试 (`debug`)」两套模式、聊天指令、相关协议与 UI。  
